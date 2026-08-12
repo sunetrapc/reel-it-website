@@ -1324,11 +1324,42 @@ demoSwitch?.addEventListener('click', () => {
 
 setDemoAvailability(true);
 
-document.getElementById('accessForm')?.addEventListener('submit', (e) => {
+const WAITLIST_URL = 'https://script.google.com/macros/s/AKfycbw1uV9kApCgQm0Z_pM16MPurcgmgZ0SeJXt_QlDBc_l-FfKQgxjaGqHNKKe2JSU7KVd/exec';
+
+document.getElementById('accessForm')?.addEventListener('submit', async (e) => {
   e.preventDefault();
+  const form = e.currentTarget;
   const message = document.getElementById('formMessage');
-  message.textContent = "Thanks, this demo form is ready to connect to your real mailing list or backend.";
-  e.currentTarget.reset();
+  const submitButton = form.querySelector('button[type="submit"]');
+  const formData = new FormData(form);
+
+  const submission = {
+    name: String(formData.get('name') || '').trim(),
+    email: String(formData.get('email') || '').trim(),
+    interest: String(formData.get('interest') || ''),
+    source: 'thereelit.com'
+  };
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'Joining…';
+  message.textContent = '';
+
+  try {
+    await fetch(WAITLIST_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(submission)
+    });
+
+    form.reset();
+    message.textContent = "You’re on the list! We’ll keep you posted.";
+  } catch (error) {
+    message.textContent = 'Something went wrong. Please try again.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Join the Waitlist';
+  }
 });
 
 </script>
