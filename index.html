@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Reel It, book a trusted local Reelo to capture the moments you want to remember." />
+  <meta name="description" content="Reel It is an India-first on-demand marketplace connecting people and businesses with nearby Reelos for short-form photo and video capture." />
   <meta name="theme-color" content="#0b1f45" />
   <title>Reel It</title>
 <style>
@@ -821,6 +821,153 @@ body {
   }
 }
 
+
+/* ===== V8: investor-ready clarity + market evidence ===== */
+.why-now-section {
+  background: #0b1f45 !important;
+  color: #ffffff;
+}
+.why-now-section .why-heading h2 { color:#ffffff !important; }
+.why-now-section .why-heading p { color:#cbd9f5 !important; }
+.market-stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.market-stat {
+  background:#ffffff;
+  color:#101828;
+  border-radius:24px;
+  padding:28px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.market-stat .market-source {
+  color:#1769ff;
+  font-size:10px;
+  letter-spacing:.09em;
+  font-weight:800;
+}
+.market-stat > strong {
+  display:block;
+  color:#0b1f45;
+  font-size:clamp(34px,4vw,52px);
+  line-height:1;
+  letter-spacing:-.04em;
+  margin:18px 0 12px;
+}
+.market-stat h3 {
+  margin:0 0 8px;
+  color:#101828;
+  font-size:18px;
+}
+.market-stat p {
+  color:#667085;
+  margin:0;
+  font-size:13px;
+}
+.market-chart-card {
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:40px;
+  align-items:center;
+  background:#15376f;
+  border:1px solid #28508f;
+  border-radius:28px;
+  padding:34px;
+}
+.market-chart-copy h3 {
+  color:#ffffff !important;
+  font-size:28px;
+  margin:8px 0 10px;
+}
+.market-chart-copy p {
+  color:#cbd9f5 !important;
+  margin:0;
+  font-size:13px;
+}
+.mini-bar-chart { display:grid; gap:15px; }
+.bar-row {
+  display:grid;
+  grid-template-columns:48px 1fr 78px;
+  gap:12px;
+  align-items:center;
+  font-size:12px;
+}
+.bar-year { color:#d8e5ff; font-weight:800; }
+.bar-row strong { color:#ffffff; text-align:right; font-size:12px; }
+.bar-track {
+  height:12px;
+  background:#24477f;
+  border-radius:999px;
+  overflow:hidden;
+}
+.bar-fill {
+  height:100%;
+  display:block;
+  background:#8fb5ff;
+  border-radius:999px;
+}
+.market-sources {
+  margin-top:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  color:#9fb7de;
+  font-size:11px;
+  line-height:1.6;
+}
+.market-sources strong { color:#ffffff; }
+.market-sources a {
+  color:#d8e5ff;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.economics-section { background:#eef4ff !important; }
+.economics-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.economics-grid article {
+  background:#ffffff;
+  border:1px solid #cfdcf2;
+  border-radius:24px;
+  padding:28px;
+}
+.economics-grid article > span {
+  color:#1769ff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.1em;
+}
+.economics-grid h3 {
+  margin:18px 0 10px;
+  font-size:22px;
+}
+.economics-grid p {
+  color:#667085;
+  font-size:14px;
+  margin:0;
+}
+.validation-note {
+  margin:20px 0 0;
+  padding:18px 20px;
+  background:#ffffff;
+  border:1px solid #cfdcf2;
+  border-radius:16px;
+  color:#475467;
+  font-size:13px;
+}
+@media (max-width:960px){
+  .market-stats,.economics-grid { grid-template-columns:1fr; }
+  .market-chart-card { grid-template-columns:1fr; }
+}
+@media (max-width:640px){
+  .market-chart-card { padding:24px 18px; }
+  .bar-row { grid-template-columns:42px 1fr 70px; gap:8px; }
+}
+
 </style>
 </head>
 <body>
@@ -840,14 +987,13 @@ body {
       </button>
 
       <nav class="nav">
-        <a href="#what-is-reel-it">What is Reel It?</a>
         <a href="#how-it-works">How it works</a>
+        <a href="#why-now">Why now</a>
         <a href="#safety">Safety</a>
         <a href="#for-reelos">For Reelos</a>
-        <a href="#packages">Packages</a>
+        <a href="#packages">Use cases</a>
+        <a href="#about">About</a>
         <a href="#faq">FAQ</a>
-        <a href="#about">About Us</a>
-        <a class="nav-link-soft" href="#support">Support</a>
         <a class="button button-small" href="#early-access">Join the Waitlist</a>
       </nav>
     </div>
@@ -860,7 +1006,8 @@ body {
           <div class="eyebrow">ON-DEMAND CONTENT CAPTURE</div>
           <h1>Capture the moment.<br><span>Keep the memory.</span></h1>
           <p class="hero-sub">
-            Need someone to capture your moment? Reel It connects you with a trusted local <strong>Reelo</strong> who can take the photos and videos, while you stay present in them.
+            <strong>Reel It is an on-demand marketplace for short-form photo and video capture.</strong>
+            Book a nearby Reelo for the moments you want documented, while you stay present in them.
           </p>
 
           <div class="hero-actions">
@@ -869,9 +1016,9 @@ body {
           </div>
 
           <div class="trust-row">
-            <div><strong>18+</strong><span>Verified onboarding</span></div>
-            <div><strong>Clear</strong><span>Booking & handoff flow</span></div>
-            <div><strong>Flexible</strong><span>Phone, GoPro or your camera</span></div>
+            <div><strong>India-first</strong><span>Built for a mobile-first market</span></div>
+            <div><strong>Short sessions</strong><span>Everyday capture, not a full production</span></div>
+            <div><strong>Two-sided</strong><span>Memories for customers, flexible work for Reelos</span></div>
           </div>
         </div>
 
@@ -936,7 +1083,7 @@ body {
           <div class="eyebrow">WHAT IS REEL IT?</div>
           <h2>A simple new way to get your moment captured.</h2>
           <p class="lead">
-            Reel It is not a traditional photography studio. It is an on-demand marketplace for everyday content capture, dates, travel, birthdays, profile photos, creator content and spontaneous moments.
+            Reel It is not a traditional photography studio. It is a local marketplace designed for shorter, simpler capture needs: dates, travel, birthdays, profile photos, creator content, small businesses and spontaneous moments.
           </p>
         </div>
 
@@ -949,6 +1096,83 @@ body {
           <div class="concept-arrow">↓</div>
           <span class="concept-label">YOU GET</span>
           <h3>The footage, without missing the moment yourself.</h3>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section why-now-section" id="why-now">
+      <div class="container">
+        <div class="section-heading why-heading">
+          <div class="eyebrow">WHY NOW</div>
+          <h2>India is becoming a video-first, creator-powered market.</h2>
+          <p>
+            Reel It is early, so these are <strong>market signals — not Reel It traction</strong>.
+            They show the larger shift toward creators, digital media and short-form content that makes this problem worth testing now.
+          </p>
+        </div>
+
+        <div class="market-stats">
+          <article class="market-stat">
+            <span class="market-source">BCG · 2025</span>
+            <strong>2–2.5M</strong>
+            <h3>Monetized creators in India</h3>
+            <p>BCG estimates India already has roughly two to two-and-a-half million monetized content creators.</p>
+          </article>
+
+          <article class="market-stat">
+            <span class="market-source">BCG · 2025</span>
+            <strong>$350–400B</strong>
+            <h3>Creator-influenced spending</h3>
+            <p>BCG estimates creators influence hundreds of billions of dollars in consumer spending in India.</p>
+          </article>
+
+          <article class="market-stat">
+            <span class="market-source">Statista / EY · 2026 release</span>
+            <strong>₹947B</strong>
+            <h3>Digital ad revenue in 2025</h3>
+            <p>India's digital advertising revenue reached ₹947 billion in 2025, according to Statista data sourced to EY.</p>
+          </article>
+        </div>
+
+        <div class="market-chart-card">
+          <div class="market-chart-copy">
+            <span class="eyebrow">THE DIRECTION OF TRAVEL</span>
+            <h3>India's digital advertising revenue has expanded rapidly.</h3>
+            <p>Selected historical points from Statista's India digital advertising revenue series, sourced to EY. Values are ₹ billions.</p>
+          </div>
+
+          <div class="mini-bar-chart" role="img" aria-label="India digital advertising revenue: 154.4 billion rupees in 2018, 383 billion in 2021, 597 billion in 2023, and 947 billion in 2025.">
+            <div class="bar-row">
+              <span class="bar-year">2018</span>
+              <div class="bar-track"><span class="bar-fill" style="width:16.3%"></span></div>
+              <strong>₹154.4B</strong>
+            </div>
+            <div class="bar-row">
+              <span class="bar-year">2021</span>
+              <div class="bar-track"><span class="bar-fill" style="width:40.4%"></span></div>
+              <strong>₹383B</strong>
+            </div>
+            <div class="bar-row">
+              <span class="bar-year">2023</span>
+              <div class="bar-track"><span class="bar-fill" style="width:63.0%"></span></div>
+              <strong>₹597B</strong>
+            </div>
+            <div class="bar-row">
+              <span class="bar-year">2025</span>
+              <div class="bar-track"><span class="bar-fill" style="width:100%"></span></div>
+              <strong>₹947B</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="market-sources">
+          <strong>Sources:</strong>
+          <a href="https://www.bcg.com/publications/2025/india-from-content-to-commerce-mapping-indias-creator-economy" target="_blank" rel="noopener">BCG — Mapping India’s Creator Economy</a>
+          <span>•</span>
+          <a href="https://www.statista.com/statistics/233493/india-digital-ad-revenue/" target="_blank" rel="noopener">Statista — India digital advertising revenue (source: EY)</a>
+          <span>•</span>
+          <a href="https://www.ibef.org/news/india-s-advertising-market-projected-to-grow-at-7-8-in-2025-magna" target="_blank" rel="noopener">IBEF / Magna — India advertising outlook</a>
         </div>
       </div>
     </section>
@@ -999,14 +1223,14 @@ body {
           <div class="eyebrow">TRUST & SAFETY</div>
           <h2>Trust is part of the booking flow.</h2>
           <p class="lead">
-            Reel It is being built around clear identity, booking, support and content-handoff rules, not just a profile page and a payment button.
+            Reel It is being designed around clear identity, booking, support and content-handoff rules from day one, with launch controls tested before public rollout.
           </p>
 
           <div class="check-list">
-            <div><span>✓</span><p><strong>Structured Reelo onboarding</strong><br>Profile, equipment, service area, training and platform rules.</p></div>
-            <div><span>✓</span><p><strong>Privacy-aware capture</strong><br>Customers can choose whose camera is used, with explicit footage transfer and deletion confirmation.</p></div>
-            <div><span>✓</span><p><strong>Simple cancellation support</strong><br>Clear booking states, cancellation windows and refund pathways.</p></div>
-            <div><span>✓</span><p><strong>Reputation earned inside Reel It</strong><br>Every new Reelo begins as a Beginner and progresses through real work and reviews.</p></div>
+            <div><span>✓</span><p><strong>Planned Reelo verification</strong><br>Identity, profile, equipment, service area and platform-rule checks are part of the intended onboarding flow.</p></div>
+            <div><span>✓</span><p><strong>Privacy-aware capture</strong><br>The product is designed around explicit footage transfer and local-deletion confirmation where applicable.</p></div>
+            <div><span>✓</span><p><strong>Clear booking states</strong><br>Cancellation windows, support pathways and refund rules will be tested before launch.</p></div>
+            <div><span>✓</span><p><strong>Reputation earned through work</strong><br>The planned reputation system grows through completed bookings, reliability and customer reviews.</p></div>
           </div>
         </div>
       </div>
@@ -1103,6 +1327,37 @@ body {
       </div>
     </section>
 
+
+    <section class="section economics-section" id="marketplace-model">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">MARKETPLACE MODEL</div>
+          <h2>Simple enough for both sides to understand.</h2>
+          <p>The goal is not to hide the economics behind the booking. Customers should know what they pay, Reelos should know what they earn, and Reel It should earn only when the marketplace creates value.</p>
+        </div>
+
+        <div class="economics-grid">
+          <article>
+            <span>FOR CUSTOMERS</span>
+            <h3>Clear booking price</h3>
+            <p>Choose the capture need and session details, then see the total before confirming. Launch pricing is still being validated and will be published before paid rollout.</p>
+          </article>
+          <article>
+            <span>FOR REELOS</span>
+            <h3>Clear expected earnings</h3>
+            <p>Reelos are intended to see expected earnings before accepting a request, so each booking is an informed choice.</p>
+          </article>
+          <article>
+            <span>FOR REEL IT</span>
+            <h3>Aligned with completed bookings</h3>
+            <p>A sustainable marketplace requires a transparent platform fee. The exact launch take rate is being tested rather than presented as a finished number today.</p>
+          </article>
+        </div>
+
+        <p class="validation-note"><strong>Pre-launch note:</strong> pricing, fees and marketplace rules are being validated before launch. This page intentionally does not present untested assumptions as traction.</p>
+      </div>
+    </section>
+
     <section class="section faq-section" id="faq">
       <div class="container faq-grid">
         <div>
@@ -1130,8 +1385,17 @@ body {
           </div>
           <div class="faq-item">
             <button class="faq-question">How do Reelos get paid?<span>+</span></button>
-            <div class="faq-answer"><p>Reelos select a saved bank account or UPI payout method and see their expected earnings inside the app.</p></div>
+            <div class="faq-answer"><p>The intended launch flow lets Reelos choose a supported payout method and see expected earnings before accepting work. Final payout rails will be confirmed before launch.</p></div>
           </div>
+          <div class="faq-item">
+            <button class="faq-question">How much will a Reel It booking cost?<span>+</span></button>
+            <div class="faq-answer"><p>Launch pricing is still being validated. The goal is transparent short-session pricing, with the full customer total and expected Reelo earnings shown before either side commits.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is Reel It live yet?<span>+</span></button>
+            <div class="faq-answer"><p>Reel It is currently in an early, India-first build and validation stage. The waitlist is for early customer access, Reelo onboarding and launch updates.</p></div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1140,66 +1404,41 @@ body {
       <div class="container about-grid">
         <aside class="founder-card">
           <div class="founder-mark">RI</div>
-          <span class="mini">BORN FROM A VERY REAL PROBLEM</span>
+          <span class="mini">FOUNDER STORY</span>
           <h3>I wanted the memory without having to miss the moment.</h3>
-          <p>Somewhere between getting ready, living life, and asking my mom to take “just one more photo,” Reel It started making a little too much sense.</p>
+          <p>Reel It started with a small frustration that kept showing up in real life: sometimes you want good photos or video, but you do not need a full photoshoot.</p>
         </aside>
 
         <div class="story-copy">
-          <div class="eyebrow">OUR STORY</div>
-          <h2>It started with bad photos, good outfits, and one question I couldn’t quite let go.</h2>
+          <div class="eyebrow">ABOUT REEL IT</div>
+          <h2>A personal problem became a two-sided marketplace idea.</h2>
 
           <p class="story-lead">
-            Hi, I’m <strong>Sunetra Pal Chowdhury</strong>, the founder of Reel It. I grew up in Calcutta, studied Economics at the University of Calcutta, and later moved across the U.S. for graduate school and work, eventually pursuing my Master’s in Business Analytics.
+            Hi, I’m <strong>Sunetra Pal Chowdhury</strong>, founder of Reel It. I grew up in Calcutta, studied Economics at the University of Calcutta, later moved across the U.S. for graduate school and work, and pursued my Master’s in Business Analytics.
           </p>
 
           <p>
-            Somewhere along the way, sitting in New York, surrounded by a city where everyone seems to be living, creating, filming, posting, and somehow looking effortlessly photogenic while doing it, an old frustration of mine started feeling less like a random complaint and more like an idea.
-          </p>
-
-          <p>
-            Reel It didn’t begin with a spreadsheet, a business model, or some dramatic founder light-bulb moment.
-          </p>
-
-          <p>
-            It began with something much more serious: getting ready, spending what felt like a small national budget on the outfit, the makeup and the plan… and then realizing that the entire photography department was my mom.
+            The idea came from an ordinary problem: I wanted photos and videos of dates, trips, birthdays and everyday moments, but asking a friend or family member repeatedly meant somebody was always behind the camera. Hiring a traditional photographer often felt like too much for a short, casual moment.
           </p>
 
           <div class="story-quote">
-            And I love her for trying. I really do. But sometimes half the photo had her finger in it. Sometimes the angle was doing absolutely nobody any favors. And sometimes, after the tenth “Ma, one more please,” I started thinking the economy might support another solution.
+            Why should capturing a 30-minute moment require turning it into a full production?
           </div>
 
           <p>
-            That silly little frustration kept following me.
+            That became Reel It: a way to connect someone who wants a moment captured with a nearby person who can capture it. The same marketplace can serve creators and small businesses that need flexible content without organizing a full shoot.
           </p>
 
           <p>
-            At concerts, on trips, at birthdays, over coffee, on dates, or on one of those unexpectedly good days, I kept thinking the same thing: <strong>why is it still so hard to get a few good photos or videos of an ordinary moment without turning it into a full photoshoot?</strong>
+            The supply side matters just as much to me. India has a huge base of people learning photography, video and social content skills. If Reel It can help one person keep a memory while helping another earn from a useful creative skill, that is the company I want to build.
           </p>
 
-          <p>
-            Not everyone needs a photographer for an entire day. Sometimes you just want someone for 30 minutes who understands the angle, the candid moment, the vertical video, and the fact that you actually want to be present instead of managing the camera the whole time.
-          </p>
-
-          <p>
-            That became the first half of Reel It: a simple way to book a trusted local person, a <strong>Reelo</strong>, to capture the moment while you actually get to live it. For creators and small businesses, that same idea can mean something more practical too: getting content made without turning every shoot into a production or searching endlessly for someone available.
-          </p>
-
-          <p>
-            The second half of the idea became even more important to me. I grew up in India, and it is impossible not to see how difficult finding steady work can be for so many people, especially young people trying to build a livelihood. At the same time, an entire economy has grown around short-form video, social media, photography and content. I kept wondering whether those two realities could meet.
-          </p>
-
-          <p>
-            Reel It is my attempt to make that meeting useful. Someone who already knows how to shoot, or wants to build that skill, can turn it into flexible gig work. An experienced photographer or videographer can use the platform as another way to find customers and grow a business. A creator, traveller, couple or local shop can find someone when they actually need them. <strong>One booking is a captured memory for one person — and paid work for another.</strong>
-          </p>
-
-          <div class="story-quote">
-            If Reel It can help someone keep a memory and help someone else earn from creating it, that feels like a pretty good reason to build.
+          <div class="founder-meta">
+            <span>India-first</span>
+            <span>Marketplace</span>
+            <span>Everyday content capture</span>
+            <span>Flexible creative work</span>
           </div>
-
-          <p>
-            We are starting thoughtfully, learning as we go, and building around a very simple belief: technology should make everyday life a little easier, a little more human, and, if possible, create opportunity along the way. <strong>Every moment deserves a reel.</strong>
-          </p>
         </div>
       </div>
     </section>
@@ -1245,8 +1484,9 @@ body {
 
       <div>
         <strong>Product</strong>
-        <a href="#about">About Us</a>
         <a href="#how-it-works">How it works</a>
+        <a href="#why-now">Why now</a>
+        <a href="#about">About Us</a>
         <a href="#for-reelos">Become a Reelo</a>
         <a href="#packages">Packages</a>
       </div>
